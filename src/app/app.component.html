@@ -30,6 +30,38 @@
         <a href="#"mat-list-item>Menu Item 6</a>
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content fxFlexFill>Main content..!!!:)</mat-sidenav-content>
+    <mat-sidenav-content fxFlexFill>
+
+<ng-container *ngFor="let i of [0,1,2,3]">
+  <div *ngIf="i==index && !loading" [@flyInOut] [ngClass]="'background div'+i">
+  </div>
+</ng-container>
+<div *ngIf="loading" class="background div0"></div>
+
+
+   <div style="font: 500 20px/32px Roboto, 'Helvetica Neue', sans-serif;text-align: center;
+    margin-top: 50%;
+    color: white;
+    font-size: 31px;"> Bollywood Trending</div>
+
+
+
+  </mat-sidenav-content>
   </mat-sidenav-container>
+
+  <div class="footer">
+   <p>BollywoodTrending.in<br>
+      <span id="socialMedia">
+      <span><i class="fa fa-facebook-square" style="cursor: pointer;"  aria-hidden="true"></i>
+      </span> 
+      <span style="margin-left: 10px"><i style="cursor: pointer;" class="fa fa-twitter"  aria-hidden="true">
+      <a href="https://twitter.com/toptrendinglive"></a>
+      </i>
+      </span> 
+      <span style="margin-left: 10px"><i style="cursor: pointer;" class="fa fa-linkedin"  aria-hidden="true"></i>
+      </span>
+      </span><br>
+<!--       <span>Feedback : sarvesh.y305@gmail.com</span>
+ -->   </p>
+</div>
 </div>
